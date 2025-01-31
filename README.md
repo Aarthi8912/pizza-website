@@ -6,6 +6,7 @@ and allow users to view the different varieties of pizza. Built using HTML, CSS,
 this basic website delivers a seamless and interactive user experience.
 
 Table of Contents
+
        * Features
        * Technologies Used
        * Folder Structure
@@ -60,6 +61,7 @@ pizza-website/
 └── README.md  
 
 Acknowledgments:
+
     * Inspired by modern pizza website designs.
     * Thanks to online resources and tutorials for guidance.
 
