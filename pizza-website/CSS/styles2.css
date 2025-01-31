@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #fdeedc, #fff5e1);
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+.order-btn {
+    background: #ff6347;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 99, 71, 0.2);
+}
+
+.order-btn:hover {
+    background: #e5533d;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 99, 71, 0.5);
+}
+
+/* Products Section */
+.products {
+    text-align: center;
+    padding: 40px 15px;
+    animation: slide-in 0.8s ease-out;
+}
+
+.products h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Pizza Container */
+.pizza-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* First row with 3 columns */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Pizza Card */
+.pizza-card {
+    position: relative;
+    background: linear-gradient(to bottom, #ffffff, #fdf7e9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(255, 99, 71, 0.2), 0 8px 30px rgba(255, 99, 71, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    animation: slide-in 0.8s ease-out;
+    overflow: hidden;
+}
+
+/* Floating Badge */
+.pizza-card::before {
+    content: "Best Seller";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff6347;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+/* Hover and Click Effects */
+.pizza-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: linear-gradient(to bottom, #fff5e1, #ffe4c4);
+    box-shadow: 0 10px 30px rgba(255, 99, 71, 0.25);
+}
+
+.pizza-card:active {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Pizza Card Image */
+.pizza-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pizza Card Text */
+.pizza-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff6347;
+}
+
+/* Animation: Slide in from bottom */
+@keyframes slide-in {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation: Floating Effect */
+@keyframes card-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.pizza-card:hover {
+    animation: card-float 1.5s infinite ease-in-out;
+}
+
+/* Ensuring all rows have the same width */
+.pizza-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns in first row */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.pizza-container > .pizza-card:nth-child(n+4) {
+    grid-column: span 1; /* Ensure each pizza card in the second and third rows takes up one column */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .pizza-container {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .pizza-container {
+        grid-template-columns: 1fr;  /* Single column on smaller screens */
+    }
+}
