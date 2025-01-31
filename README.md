@@ -13,23 +13,30 @@ Table of Contents
        * Acknowledgments
        
 Features:
+
 Navigation Bar
+
        * A clean and responsive navigation bar.
        * Links to various sections of the website (e.g., About Us, Popular, Products, Contact).
 Title Section
+
       * Eye-catching gradient background.
       * Prominent title and introduction.
 Ingredients Section
+
       * List of pizza ingredients with icons and descriptions.
       * Interactive hover effects and animations.
 Footer
+
 Divided into three sections:
+
       * Social Links: Links to social media platforms.
       * Subscribe Section: Allows users to input their email for discounts.
       * Payment Options: Displays supported payment methods.
 Animations for hover effects, bounce effects for icons, and a dynamic subscribe button.
 
 Technologies Used:
+
      HTML: Structure of the website.
      CSS: Styling and animations.
      JavaScript: Interactivity and functionality.
