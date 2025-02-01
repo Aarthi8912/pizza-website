@@ -273,6 +273,94 @@ nav {
         width: 50px;
     }
 }
+/* Small Devices (Mobile Phones) */
+@media screen and (max-width: 600px) {
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        height: auto; /* Adjust height for better mobile experience */
+    }
+
+    .hero-text {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px; /* Reduce heading size */
+    }
+
+    .hero-text p {
+        font-size: 14px; /* Smaller font size for paragraphs */
+    }
+
+    .order-now {
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 20px; /* Slightly smaller button for mobile */
+    }
+
+    /* Hero Image */
+    .hero-image {
+        max-width: 300px; /* Smaller board size for mobile */
+        margin: 20px auto 0;
+    }
+
+    .pizza, .ingredient-pizza {
+        max-width: 300px; /* Matches hero-image width */
+    }
+
+    .ingredient {
+        width: 30px; /* Reduce size of floating ingredients */
+    }
+
+    .ingredient-tomato,
+    .ingredient-pepperoni,
+    .ingredient-mushroom,
+    .ingredient-leaf-1,
+    .ingredient-leaf-2,
+    .ingredient-olive {
+        animation: none; /* Disable float animations for better performance on mobile */
+    }
+
+    /* Navigation Bar */
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .order-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 1024px) {
+    .hero-image {
+        max-width: 450px; /* Adjust size for tablets */
+    }
+
+    .pizza, .ingredient-pizza {
+        max-width: 450px; /* Matches hero-image width */
+    }
+
+    .ingredient {
+        width: 60px; /* Slightly smaller for a balanced layout */
+    }
+}
 
 @media screen and (max-width: 768px) {
     nav {
