@@ -274,6 +274,7 @@ nav {
     }
 }
 /* Small Devices (Mobile Phones) */
+/* Responsive Design for Small Devices (Phones) */
 @media screen and (max-width: 600px) {
     /* Hero Section */
     .hero {
@@ -304,25 +305,53 @@ nav {
 
     /* Hero Image */
     .hero-image {
-        max-width: 300px; /* Smaller board size for mobile */
+        max-width: 400px; /* Larger board size for mobile */
         margin: 20px auto 0;
     }
 
     .pizza, .ingredient-pizza {
-        max-width: 300px; /* Matches hero-image width */
+        max-width: 400px; /* Matches hero-image width for a larger pizza image */
     }
 
     .ingredient {
-        width: 30px; /* Reduce size of floating ingredients */
+        width: 40px; /* Adjust size of floating ingredients for better visibility */
     }
 
-    .ingredient-tomato,
-    .ingredient-pepperoni,
-    .ingredient-mushroom,
-    .ingredient-leaf-1,
-    .ingredient-leaf-2,
+    /* Enable Floating Animations for Ingredients */
+    .ingredient-tomato {
+        top: 20%;
+        left: 45%;
+        animation: float 3s infinite alternate;
+    }
+
+    .ingredient-pepperoni {
+        top: 35%;
+        right: 20%;
+        animation: float 4s infinite alternate;
+    }
+
+    .ingredient-mushroom {
+        bottom: 35%;
+        left: 20%;
+        animation: float 5s infinite alternate;
+    }
+
+    .ingredient-leaf-1 {
+        top: 30%;
+        left: 25%;
+        animation: float 4.5s infinite alternate;
+    }
+
+    .ingredient-leaf-2 {
+        bottom: 15%;
+        right: 50%;
+        animation: float 3.5s infinite alternate;
+    }
+
     .ingredient-olive {
-        animation: none; /* Disable float animations for better performance on mobile */
+        bottom: 15%;
+        right: 25%;
+        animation: float 6s infinite alternate;
     }
 
     /* Navigation Bar */
@@ -346,6 +375,7 @@ nav {
         padding: 8px 16px;
     }
 }
+
 
 /* Medium Devices (Tablets) */
 @media screen and (max-width: 1024px) {
