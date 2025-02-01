@@ -1,4 +1,4 @@
-/* Reset default styles */
+* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -150,7 +150,7 @@ nav {
     position: relative;
     width: 550px;
     height: 550px;
-    max-width: 550px;
+    max-width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,16 +167,16 @@ nav {
 
 /* Board Image */
 .pizza {
-    width: 90%;
-    max-width: 550px;
+    width: 100%;
+    max-width: 500px;
     position: relative;
     z-index: 1;
 }
 
 /* Pizza Ingredient */
 .ingredient-pizza {
-    width: 90%;
-    max-width: 550px;
+    width: 80%;
+    max-width:450px;
     position: absolute;
     top: 60%;
     left: 50%;
@@ -273,124 +273,6 @@ nav {
         width: 50px;
     }
 }
-/* Small Devices (Mobile Phones) */
-/* Responsive Design for Small Devices (Phones) */
-@media screen and (max-width: 600px) {
-    /* Hero Section */
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-        height: auto; /* Adjust height for better mobile experience */
-    }
-
-    .hero-text {
-        max-width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .hero-text h1 {
-        font-size: 28px; /* Reduce heading size */
-    }
-
-    .hero-text p {
-        font-size: 14px; /* Smaller font size for paragraphs */
-    }
-
-    .order-now {
-        font-size: 14px;
-        padding: 10px 20px;
-        border-radius: 20px; /* Slightly smaller button for mobile */
-    }
-
-    /* Hero Image */
-    .hero-image {
-        max-width: 400px; /* Larger board size for mobile */
-        margin: 20px auto 0;
-    }
-
-    .pizza, .ingredient-pizza {
-        max-width: 400px; /* Matches hero-image width for a larger pizza image */
-    }
-
-    .ingredient {
-        width: 40px; /* Adjust size of floating ingredients for better visibility */
-    }
-
-    /* Enable Floating Animations for Ingredients */
-    .ingredient-tomato {
-        top: 20%;
-        left: 45%;
-        animation: float 3s infinite alternate;
-    }
-
-    .ingredient-pepperoni {
-        top: 35%;
-        right: 20%;
-        animation: float 4s infinite alternate;
-    }
-
-    .ingredient-mushroom {
-        bottom: 35%;
-        left: 20%;
-        animation: float 5s infinite alternate;
-    }
-
-    .ingredient-leaf-1 {
-        top: 30%;
-        left: 25%;
-        animation: float 4.5s infinite alternate;
-    }
-
-    .ingredient-leaf-2 {
-        bottom: 15%;
-        right: 50%;
-        animation: float 3.5s infinite alternate;
-    }
-
-    .ingredient-olive {
-        bottom: 15%;
-        right: 25%;
-        animation: float 6s infinite alternate;
-    }
-
-    /* Navigation Bar */
-    nav {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px 20px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    .order-btn {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-}
-
-
-/* Medium Devices (Tablets) */
-@media screen and (max-width: 1024px) {
-    .hero-image {
-        max-width: 450px; /* Adjust size for tablets */
-    }
-
-    .pizza, .ingredient-pizza {
-        max-width: 450px; /* Matches hero-image width */
-    }
-
-    .ingredient {
-        width: 60px; /* Slightly smaller for a balanced layout */
-    }
-}
 
 @media screen and (max-width: 768px) {
     nav {
@@ -409,5 +291,21 @@ nav {
 
     .hero-text p {
         font-size: 16px;
+    }
+    .pizza {
+        width: 80vw; /* Adjust dynamically to screen width */
+        max-width: 300px; /* Prevent it from being too large */
+    }
+
+    .ingredient-pizza {
+        width: 95%; /* Increase its size to match the pizza */
+        max-width: 280px; /* Ensure it doesn’t become too small */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ingredient {
+        width: 40px; /* Make floating ingredients smaller */
     }
 }
