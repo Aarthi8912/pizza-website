@@ -44,7 +44,7 @@ Technologies Used:
 Folder Structure:
 
 pizza-website/  
-├── HTML/  
+├── (HTML files) 
 │   ├── index.html  
 │   ├── about.html  
 │   ├── popular.html  
@@ -52,7 +52,7 @@ pizza-website/
 │   ├── products.html  
 │   ├── contact.html  
 │  
-├── CSS/  
+├── (CSS files)  
 │   ├── style.css  
 │   ├── styles.css  
 │   ├── styles1.css  
@@ -60,7 +60,7 @@ pizza-website/
 │   ├── styles3.css  
 │   ├── styles4.css  
 │  
-├── images/  
+├── (image folder) 
 │   ├── [ images will go here, e.g., pizza-img.jpg, youtube.png, etc.]  
 │  
 ├── script.js  
